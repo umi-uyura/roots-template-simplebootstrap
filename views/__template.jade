@@ -1,0 +1,23 @@
+doctype 5
+html(lang="ja")
+  head
+    include _layout_head_meta
+
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    title= title
+
+    include _layout_head_style
+
+    include _layout_head_html5shim
+
+  body
+    != content
+
+    include _layout_body_scripts
+
+    include _ga
+
+    //- this must be included for live reload to work in developement
+    //- it will be automatically ignored when deployed
+    != livereload
