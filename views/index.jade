@@ -13,10 +13,9 @@ html(lang="ja")
   body
     h1 #{title}
 
-    h2 Journals
-  
-    block body_content
-      ul#posts
+    #journals
+      h2 Journals
+      ul
         - each journal in sort(site.journals, { by: 'date' })
           li
             a(href="#{journal.url}")= journal.date + " - " + journal.title
